@@ -12,45 +12,6 @@ from forecast import Forecast, validate_params
 app = Flask(__name__)
 log = app.logger
 
-
-
-url = 'http://public-api.wordpress.com/wp/v2/sites/ampmbot.home.blog/'
-url_win = 'http://public-api.wordpress.com/wp/v2/sites/wampmbot.wordpress.com/'
-
-translate_tags = {
-                    'actuacion': 345911,
-                    'animacion': 15460,
-                    'artista-novel': 33415385,
-                    'cancion-balada': 173751769,
-                    'coreografico': 17063051,
-                    'del-ano': 3827638,
-                    'direccion': 256770,
-                    'direccion-de-arte': 23919,
-                    'diseno-de-vestuario': 1412009,
-                    'edicion': 367299,
-                    'efectos-visuales': 683445,
-                    'fotografia': 1378,
-                    'fusion': 53189,
-                    'hip-hop': 31276,
-                    'making-of': 207776,
-                    'mas-popular': 55212990,
-                    'musica-instrumental': 1437873,
-                    'musica-para-ninos': 1580924,
-                    'musica-pop': 593374,
-                    'musica-tradicional': 1084519,
-                    'rock': 1433,
-                    'musica-urbana': 3838229,
-                    'opera-prima': 1968064,
-                    'pop-house-electronico': 663889658,
-                    'pop-rock': 121091,
-                    'pop-urbano-tropical': 663894947,
-                    'popular-bailable': 70389641,
-                    'produccion': 65067,
-                    'trova': 332831
-                }
-cat_artistas = 20500
-cat_directors = 3716
-
 @app.route('/',  methods=['GET', 'POST'])
 def webhook():
     """This method handles the http requests for the Dialogflow webhook
