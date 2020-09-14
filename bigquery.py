@@ -1,6 +1,6 @@
 from google.cloud import bigquery
 
-client = bigquery.Client()
+client = bigquery.Client(project='dev-big-data-288219')
 
 # Perform a query.
 QUERY = (
